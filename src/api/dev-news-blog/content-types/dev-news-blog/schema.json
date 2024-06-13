@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dev_news_blogs",
+  "info": {
+    "singularName": "dev-news-blog",
+    "pluralName": "dev-news-blogs",
+    "displayName": "Dev News Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "imageAltText": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "publicationDate": {
+      "type": "date"
+    },
+    "article": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "art_info_boxes",
+  "info": {
+    "singularName": "art-info-box",
+    "pluralName": "art-info-boxes",
+    "displayName": "ArtInfoBox"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

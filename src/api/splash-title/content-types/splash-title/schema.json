@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "splash_titles",
+  "info": {
+    "singularName": "splash-title",
+    "pluralName": "splash-titles",
+    "displayName": "Splash Title"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}
