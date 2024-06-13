@@ -788,6 +788,350 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiArtInfoBoxArtInfoBox extends Schema.CollectionType {
+  collectionName: 'art_info_boxes';
+  info: {
+    singularName: 'art-info-box';
+    pluralName: 'art-info-boxes';
+    displayName: 'ArtInfoBox';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Blocks;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::art-info-box.art-info-box',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::art-info-box.art-info-box',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDemoDemo extends Schema.SingleType {
+  collectionName: 'demos';
+  info: {
+    singularName: 'demo';
+    pluralName: 'demos';
+    displayName: 'demo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    game: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::demo.demo', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::demo.demo', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiDevNewsBlogDevNewsBlog extends Schema.CollectionType {
+  collectionName: 'dev_news_blogs';
+  info: {
+    singularName: 'dev-news-blog';
+    pluralName: 'dev-news-blogs';
+    displayName: 'Dev News Blog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    imageAltText: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publicationDate: Attribute.Date;
+    article: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::dev-news-blog.dev-news-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::dev-news-blog.dev-news-blog',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiImgCarouselImgCarousel extends Schema.SingleType {
+  collectionName: 'img_carousels';
+  info: {
+    singularName: 'img-carousel';
+    pluralName: 'img-carousels';
+    displayName: 'Img-carousel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::img-carousel.img-carousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::img-carousel.img-carousel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLogoLargeLogoLarge extends Schema.SingleType {
+  collectionName: 'logo_larges';
+  info: {
+    singularName: 'logo-large';
+    pluralName: 'logo-larges';
+    displayName: 'Logo Large';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::logo-large.logo-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::logo-large.logo-large',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLogoSmallLogoSmall extends Schema.SingleType {
+  collectionName: 'logo_smalls';
+  info: {
+    singularName: 'logo-small';
+    pluralName: 'logo-smalls';
+    displayName: 'Logo Small';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::logo-small.logo-small',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::logo-small.logo-small',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSplashBgSplashBg extends Schema.SingleType {
+  collectionName: 'splash_bgs';
+  info: {
+    singularName: 'splash-bg';
+    pluralName: 'splash-bgs';
+    displayName: 'SplashBG';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bg: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::splash-bg.splash-bg',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::splash-bg.splash-bg',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSplashTitleSplashTitle extends Schema.CollectionType {
+  collectionName: 'splash_titles';
+  info: {
+    singularName: 'splash-title';
+    pluralName: 'splash-titles';
+    displayName: 'Splash Title';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::splash-title.splash-title',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::splash-title.splash-title',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTeamGroupTeamGroup extends Schema.CollectionType {
+  collectionName: 'team_groups';
+  info: {
+    singularName: 'team-group';
+    pluralName: 'team-groups';
+    displayName: 'Team Group';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    founders: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    developers: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    designers: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    narrative: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    UIUX: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    artists: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    pms: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToMany',
+      'api::team-member.team-member'
+    >;
+    director: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToOne',
+      'api::team-member.team-member'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::team-group.team-group',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTeamMemberTeamMember extends Schema.CollectionType {
+  collectionName: 'team_members';
+  info: {
+    singularName: 'team-member';
+    pluralName: 'team-members';
+    displayName: 'Team Member';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.String;
+    Role: Attribute.String;
+    Dates: Attribute.String;
+    Description: Attribute.Text;
+    headshot: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    displayOrder: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::team-member.team-member',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -806,6 +1150,16 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::art-info-box.art-info-box': ApiArtInfoBoxArtInfoBox;
+      'api::demo.demo': ApiDemoDemo;
+      'api::dev-news-blog.dev-news-blog': ApiDevNewsBlogDevNewsBlog;
+      'api::img-carousel.img-carousel': ApiImgCarouselImgCarousel;
+      'api::logo-large.logo-large': ApiLogoLargeLogoLarge;
+      'api::logo-small.logo-small': ApiLogoSmallLogoSmall;
+      'api::splash-bg.splash-bg': ApiSplashBgSplashBg;
+      'api::splash-title.splash-title': ApiSplashTitleSplashTitle;
+      'api::team-group.team-group': ApiTeamGroupTeamGroup;
+      'api::team-member.team-member': ApiTeamMemberTeamMember;
     }
   }
 }
